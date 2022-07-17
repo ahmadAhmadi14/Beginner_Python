@@ -2,7 +2,7 @@ import random
 from words import words
 import string
 
-
+#STEP 1 create get_valid_word function
 def get_valid_word(words):
     word = random.choice(words)  # randomly chooses something from the list
     while '-' in word or ' ' in word:
@@ -10,7 +10,7 @@ def get_valid_word(words):
 
     return word.upper()
 
-
+#STEP 2 Create hangman function 
 def hangman():
     word = get_valid_word(words)
     word_letters = set(word)  # letters in the word
@@ -20,6 +20,7 @@ def hangman():
     lives = 7
 
     # getting user input
+    #STEP 4 create condition player has 7 lives
     while len(word_letters) > 0 and lives > 0:
         # letters used
         # ' '.join(['a', 'b', 'cd']) --> 'a b cd'
@@ -29,6 +30,7 @@ def hangman():
         word_list = [letter if letter in used_letters else '-' for letter in word]
         print('Current word: ', ' '.join(word_list))
 
+        #STEP 3 create condition to print description 
         user_letter = input('Guess a letter: ').upper()
         if user_letter in alphabet - used_letters:
             used_letters.add(user_letter)
