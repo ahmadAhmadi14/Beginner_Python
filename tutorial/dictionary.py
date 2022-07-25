@@ -14,3 +14,14 @@ print(tuples)
 print(tuples[0])
 
 # tuples[0] = 57 --> TypeError: tuple object does not support in item assignment
+
+# dictionary (dict) -> associate array
+# identifier = key
+
+thisDict = {
+    'brand': 'Ford',
+    'model': 'Mustang',
+    'year': 1964
+}
+
+print(thisDict['brand'])
