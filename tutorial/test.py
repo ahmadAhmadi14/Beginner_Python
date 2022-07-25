@@ -21,4 +21,3 @@ def multiple(number_3, number_4):
 result_multiple = multiple(8, 7)    
 print(result_multiple)
 
-
