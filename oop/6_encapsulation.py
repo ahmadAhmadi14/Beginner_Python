@@ -1,37 +1,37 @@
 # things about encapsulation
 # all variable are private
 # to consume data uses getter & setter methods
-class Student:
-    def __init__(self, name, roll_no, age):
+class Car:
+    def __init__(self, car, types, year):
         # private member
-        self.name = name
+        self.car = car
         # private members to restrict access
         # avoid direct data modification
-        self.__roll_no = roll_no
-        self.__age = age
+        self.__types = types
+        self.__year = year
 
     def show(self):
-        print('Student Details:', self.name, self.__roll_no)
+        print(f'Car Details:, {self.car}, {self.__types}, with year: {self.__year}')
 
     # getter methods
-    def get_roll_no(self):
-        return self.__roll_no
+    def get_year(self):
+        return self.__year
 
     # setter method to modify data member
     # condition to allow data modification with rules
-    def set_roll_no(self, number):
+    def set_year(self, number):
         if number > 50:
-            print('Invalid roll no. Please set correct roll number')
+            print('Car must changes')
         else:
-            self.__roll_no = number
+            self.__year = number
 
-jessa = Student('Jessa', 10, 15)
+sedan = Car('Toyota', 'Camry', 1993)
 
 # before Modify
-jessa.show()
+sedan.show()
 # changing roll number using setter
-jessa.set_roll_no(60)
+sedan.set_year(60)
 
 
-jessa.set_roll_no(25)
-jessa.show()
+sedan.set_year(25)
+sedan.show()
