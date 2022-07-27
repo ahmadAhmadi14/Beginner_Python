@@ -1,7 +1,7 @@
 class Car: # Template
     pass
 
-car1 = Car() # object
+car1 = Car() # object /instance 
 car2 = Car()
 car3 = Car()
 
