@@ -19,11 +19,11 @@ class Car:
 
     # setter method to modify data member
     # condition to allow data modification with rules
-    def set_year(self, number):
+    def set_year(self, change):
         if number > 50:
             print('Car must changes')
         else:
-            self.__year = number
+            self.__year = change
 
 sedan = Car('Toyota', 'Camry', 1993)
 
@@ -33,5 +33,5 @@ sedan.show()
 sedan.set_year(60)
 
 
-sedan.set_year(25)
+sedan.set_year(20)
 sedan.show()
