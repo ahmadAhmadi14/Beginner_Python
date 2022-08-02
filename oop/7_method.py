@@ -7,7 +7,7 @@ from datetime import date as dt
 class Employee:
     def __init__(self, name, age):
         self.name = name
-        self. age = age
+        self.age = age
     
     # a class method to check age is adult or not
     @staticmethod
